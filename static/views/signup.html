@@ -8,14 +8,12 @@
      <h1><center>Register</center></h1>
 
     <style>
-    /*----- Tabs -----*/
+
     .tabs {
     width:100%;
     display:inline-block;
     }
 
-    /*----- Tab Links -----*/
-    /* Clearfix */
     .tab-links:after {
     display:block;
     clear:both;
@@ -72,11 +70,21 @@
       margin: auto;
     }
     .form {
-      position: relative;
+      /*position: relative;
+
       z-index: 1;
       background: #FFFFFF;
       max-width: 360px;
-      margin: 0 auto 0px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0` 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+      position: relative;
+      top: 10px;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 360px;
+      margin: 0 auto 10px;
       padding: 45px;
       text-align: center;
       box-shadow: 0` 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -123,12 +131,14 @@
     }
     .container {
       position: relative;
+      top: 10px;
       z-index: 1;
       max-width: 300px;
       margin: 0 auto;
     }
     .container:before, .container:after {
       content: "";
+      top: 10px;
       display: block;
       clear: both;
     }
@@ -138,7 +148,7 @@
     }
     .container .info h1 {
       margin: 0 0 15px;
-      padding: 0;
+      padding: 0px;
       font-size: 36px;
       font-weight: 300;
       color: #1a1a1a;
@@ -154,10 +164,14 @@
     .container .info span .fa {
       color: #EF3B3A;
     }
+    a { 
+      text-decoration: none;
+      color: inherit;  
+    }
     html {
             background: url(http://science-all.com/images/city/city-01.jpg) 
             no-repeat center center; 
-            -webkit-background-size: 100%;
+            -webkit-background-size: 200%;
             padding-bottom: 0px;
             style="display: block;"
             /*-moz-background-size: cover;
@@ -165,7 +179,7 @@
             background-size: cover;*/
         }
     body {
-      padding-top: 90px;
+      padding-top: 0px;
             font-size: 16px;
             font-family: "Open Sans",serif;
             background: transparent;
@@ -179,15 +193,15 @@
     
       <form class="login-form">
         <div id="Register" class="tab active">
-          <input type="text" placeholder="your name"/>
-          <input type="text" placeholder="restaurant name"/>
-          <input type="text" placeholder="local addres"/>
-          <input type="number" placeholder="phone number"/>
-          <input type="email" placeholder="email address"/>
-          <input type="password" placeholder="password"/>
+          <input type="text" placeholder="your name" required/>
+          <input type="text" placeholder="restaurant name" required/>
+          <input type="text" placeholder="local address" required/>
+          <input type="tel" placeholder="phone number" required/>
+          <input type="email" placeholder="email address" required/>
+          <input type="password" placeholder="password" required/>
           <h5>Please submit official accreditation: </h5>
-          <input type="file" placeholder="accredation">
-          <button>sign up</button>
+          <input type="file" placeholder="accredation" required/>
+          <button><a href="confirm.html">sign up</a></button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
         </div>
       </form>
