@@ -98,10 +98,11 @@
       font-family: "Roboto", sans-serif;
       text-transform: uppercase;
       outline: 0;
+      display:inline-block;
       background: #4CAF50;
       width: 100%;
       border: 0;
-      padding: 15px;
+      padding: 10px;
       color: #FFFFFF;
       font-size: 14px;
       -webkit-transition: all 0.3 ease;
@@ -175,16 +176,42 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;      
     }
+
+    button.img{
+      background-image: url(http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png);
+    }
+    input[type=submit] {
+    /*padding:5px 15px; */
+    /*background:#66BB66; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; */
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    }
     
     </style>
  
  
       <form class="login-form">
         <div id="Login" class="tab active">
-          <input type="email" placeholder="email"/>
-          <input type="password" placeholder="password"/>
-          <button>login</button>
-          <p class="message">Not registered? <a href="signup.html">Sign Up!</a></p>
+          <input type="email" placeholder="email"required/>
+          <input type="password" placeholder="password"required/>
+          <input type="submit"><a href="static/views/confirm.html"></input></a>
+          <a href="http://www.w3schools.com"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div>
+            <!-- <a href="http://www.w3schools.com"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></button> -->
+          <p class="message">Not registered? <a href="static/views/signup.html">Sign Up!</a></p>
           <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
         </div>
       </form>
