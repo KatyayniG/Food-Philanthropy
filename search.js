@@ -79,9 +79,9 @@ function Map_create() {
                     data.open(map,marker);
                     $("#outputname").text(result.name);
                     $("#outputaddress").text(result.formatted_address);
-
               });
             });
+            $('#row_of_shit').addClass('row');
          }
       }  
 } //Map_create() end!
