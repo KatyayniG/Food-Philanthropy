@@ -169,7 +169,7 @@
       color: inherit;  
     }
     html {
-            background: url(http://science-all.com/images/city/city-01.jpg) 
+            background: url(city-01.jpg) 
             no-repeat center center; 
             -webkit-background-size: 200%;
             padding-bottom: 0px;
@@ -222,7 +222,8 @@
           <input type="password" placeholder="password" required/>
           <h5>Please submit official accreditation: </h5>
           <input type="file" placeholder="accredation" required/>
-          <input type="submit"><a href="confirm.html"></input></a>
+          <input type="button" value="submit" onClick="parent.location='confirm.html'"/>
+          <!-- <input type="button" placeholder="submit" class="button_active" onclick="confirm.html">Submit</input> -->
           <!-- <button type="submit"><a href="confirm.html">sign up</a></button> -->
            <p class="message">Already registered? <a href="login.html">Login!</a></p>
           <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
