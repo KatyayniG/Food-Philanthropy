@@ -170,9 +170,10 @@ input[type=button] {
     text-transform: uppercase;
     outline: 0;
     background: #3c3838;
-    width: 100%;
-    border: 0;
-    padding: 15px;
+    width: 89%;
+    border: 30px;
+    padding: 12px;
+    margin-left: 15px;
     color: #FFFFFF;
     font-size: 14px;
     -webkit-transition: all 0.3 ease;
@@ -182,6 +183,18 @@ input[type=button] {
 
 div.container{
   color: #FFFFFF;
+
+}
+
+div.output{
+  margin-left: 20px;
+}
+
+h4 { 
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    height: 500%;
+    width: 89%;
 
 }
 
@@ -201,53 +214,59 @@ div.container{
           </button>
           <a class="navbar-brand" href="index.html">Food Philanthropy</a>
         </div>
-        <!-- <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">Logout</a></li>
+            <!-- <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li> -->
           </ul>
-          <form class="navbar-form navbar-right">
+          <!-- <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form> -->
         </div>
-      </div> -->
+      </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="w3-container">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+       <!--  <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#" onclick = $("#menu-close").click();>Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#" onclick = $("#menu-close").click();>Edit Profile</a></li>
             <li><a href="index.html" onclick = $("#menu-close").click();>Home</a></li>
             <li><a href="#" onclick = $("#menu-close").click();>Logout</a></li>
           </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        </div> -->
+      </div>
+        <!-- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
+        <div class ="container-fluid">
           <center><h1 style= "color: white;" class="page-header">Dashboard</h1><center>
+          <br><br>
 
-          <section id="services" class="services bg-primary">
+          <!-- <section id="services" class="services bg-info"> -->
         <div class="container">
             <div class="rowtext-center">
                 <div class="col-lg-10 col-lg-offset-1">
                     
                         <div style="float:left;" id = "map"></div>
-                        <div style="float:left;" class = "rand">
+                        <div style="float:left;" class = "rand"><!-- 
                             <form class="form-horizontal" role="form">
-                                <div style="float:left;"><center><h3>Place an Order</h3></center></div>
+                                <div style="float:left;"><center><h3>Place an Order</h3></center></div> -->
+                                 <div class="form-group" style="float:left;">
+                                <center><h4 ><strong>Place an Order</strong></h4></center>
+                                <br>
 
                               <div class="form-group" style="float:left;">
-                                <center><label for="email">Company Name:</label></center>
+                                <center><label  class="control-label" for="email">Company Name:</label></center>
                                   <input type="text" class="form-control" id="email" name ="email" placeholder="Enter company name" value="katyayni's company" size="40"><br>
                         
-                                <center><label for="text">Pick Up Address:</label></center>
+                                <center><label class="control-label" for="text">Pick Up Address:</label></center>
                                   <input type="text" class="form-control" id="address" placeholder="Enter company address" value="408 East Healey, Urbana, IL 61802" size = "40"><br>
                             
 
                    
-                                <center><label for="text">Description of Item(s):</label></center>
+                                <center><label class="control-label" for="text">Description of Item(s):</label></center>
                                   <input type="itemsdescr" class="form-control" id="pwd" placeholder="Enter description of item(s)" width="40" size = "20"><br>
                                 <center>
                                 <div class = "output">
