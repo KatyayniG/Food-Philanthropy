@@ -118,7 +118,7 @@
       font-size: 12px;
     }
     .form .message a {
-      color: #4CAF50;
+      color: #5bc0de;
       text-decoration: none;
     }
     .form .register-form {
@@ -180,7 +180,7 @@
     button.img{
       background-image: url(http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png);
     }
-    input[type=button] {
+    input[type=submit] {
     /*padding:5px 15px; */
     /*background:#66BB66; 
     border:0 none;
@@ -190,7 +190,7 @@
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #4CAF50;
+    background: #5bc0de;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -200,22 +200,54 @@
     transition: all 0.3 ease;
     cursor: pointer;
     }
+/*
+    input#lock{
+      background:url(lock.png) 0 0 transparent;
+      background-repeat: no-repeat;
+      width:200px;
+      height:200px;
+      border: 0;
+      color: transparent;
+    }*/
+
+    /*input[type=submit] {
+    background: url(http://lrroberts0122.github.com/DWS/lab6/level-2/images/button.png);
+    border: 0;
+    display: block;
+    height: _the_image_height;
+    width: _the_image_width;
+    }*/
+    a {
+      color: #5bc0de;"
+    }
     
     </style>
  
  
       <form class="login-form">
         <div id="Login" class="tab active">
-          <input type="email" placeholder="email"required/>
-          <input type="password" placeholder="password"required/>
-          <input type="button" value="submit" onClick="parent.location='restaurant.html'"/>
-          <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div>
-            <!-- <a href="http://www.w3schools.com"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></button> -->
+          <input type="email" placeholder="email" required/>
+          <input type="password" placeholder="password" required/>
+          <input type="submit" value="submit" id="lock" src="lock.png" onclick="parent.location='restaurant.html';" value=""/>
+                    <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div>
           <p class="message">Not registered? <a href="static/views/signup.html">Sign Up!</a></p>
           <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
         </div>
       </form>
       
+
+ <!-- 
+      <form class="login-form" id="login" onsubmit="confirm.html">
+        <div id="Login" class="tab active">
+          <input type="email" placeholder="email" required/>
+          <input type="password" placeholder="password" required/>
+          <input type="submit" value="submit"/>
+          <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div>
+            <!-- <a href="http://www.w3schools.com"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></button> -->
+          <!-- <p class="message">Not registered? <a href="static/views/signup.html">Sign Up!</a></p>
+          <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
+        </div>
+      </form> --> 
       <!-- <form class="register-form">
         <div id="Register" class="tab">
           <input type="text" placeholder="name"/>
