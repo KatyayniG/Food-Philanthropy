@@ -208,24 +208,81 @@
     transition: all 0.3 ease;
     cursor: pointer;
     }
+
+    #login_samir1 {
+      height: 43px;
+      width: 100%;
+      overflow: hidden;
+      display: table;
+      position: relative;
+      background-color: #5bc0de;"
+      /*text-align: center;*/
+    }
+
+    #login_samir2 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #login_samir1 span {
+      text-align: center;
+      color: white;
+    }
+
+    #login_samir2 img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .holla {
+    /*padding:5px 15px; */
+    /*background:#66BB66; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; */
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #5bc0de;
+    /*width: 100%;*/
+    /*border: 0;*/
+    /*padding: 15px;*/
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    }
     
     </style>
  
     
       <form class="login-form">
         <div id="Register" class="tab active">
-          <input type="text" placeholder="your name" required/>
-          <input type="text" placeholder="restaurant name" required/>
-          <input type="text" placeholder="local address" required/>
-          <input type="tel" placeholder="phone number" required/>
-          <input type="email" placeholder="email address" required/>
-          <input type="password" placeholder="password" required/>
+          <input type="text" placeholder="your name"/>
+          <input type="text" placeholder="restaurant name"/>
+          <input type="text" placeholder="local address"/>
+          <input type="tel" placeholder="phone number"/>
+          <input type="email" placeholder="email address"/>
+          <input type="password" placeholder="password"/>
           <h5>Please submit official accreditation: </h5>
-          <input type="file" placeholder="accredation" required/>
-          <input type="submit" value="submit" onclick="parent.location='confirm.html';"/>
+          <input type="file" placeholder="accredation"/>
+          <!-- <input type="submit" value="submit"  onclick="parent.location='confirm.html';"/> -->
+          <div id="login_samir1" class='holla'>
+            <!-- <div id="login_samir2"> -->
+            <!-- <a href='confirm.html'> -->
+              <div id="login_samir2">
+                <a href='confirm.html'>
+                  <span>Submit</span>
+                </a>
+              </div>
+            <!-- </a> -->
+          </div>
           <!-- <input type="button" placeholder="submit" class="button_active" onclick="confirm.html">Submit</input> -->
           <!-- <button type="submit"><a href="confirm.html">sign up</a></button> -->
-           <p class="message">Already registered? <a href="login.html">Login!</a></p>
+          <p class="message">Already registered? <a href="login.html">Login!</a></p>
           <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
         </div>
       </form>

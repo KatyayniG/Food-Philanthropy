@@ -180,7 +180,8 @@
     button.img{
       background-image: url(http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png);
     }
-    input[type=submit] {
+    /*input[type=submit] {*/
+    .holla {
     /*padding:5px 15px; */
     /*background:#66BB66; 
     border:0 none;
@@ -191,9 +192,9 @@
     text-transform: uppercase;
     outline: 0;
     background: #5bc0de;
-    width: 100%;
-    border: 0;
-    padding: 15px;
+    /*width: 100%;*/
+    /*border: 0;*/
+    /*padding: 15px;*/
     color: #FFFFFF;
     font-size: 14px;
     -webkit-transition: all 0.3 ease;
@@ -217,8 +218,33 @@
     height: _the_image_height;
     width: _the_image_width;
     }*/
-    a {
+    .link {
       color: #5bc0de;"
+    }
+
+    #login_samir1 {
+      height: 43px;
+      width: 100%;
+      /*background-color: red;*/
+      overflow: hidden;
+      display: table;
+      position: relative;
+      /*text-align: center;*/
+    }
+
+    #login_samir2 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #login_samir1 span {
+      text-align: center;
+    }
+
+    #login_samir2 img {
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     
     </style>
@@ -228,10 +254,19 @@
         <div id="Login" class="tab active">
           <input type="email" placeholder="email" required/>
           <input type="password" placeholder="password" required/>
-          <input type="submit" value="submit" id="lock" src="lock.png" onclick="parent.location='restaurant.html';" value=""/>
-                    <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div>
-          <p class="message">Not registered? <a href="static/views/signup.html">Sign Up!</a></p>
-          <p class="message">If you don't belong here: <a href="index.html">Home</a></p>
+          <!-- <input type="submit" value="submit" id="lock" src="lock.png" onclick="parent.location='restaurant.html';" value=""/>
+                    <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a></div> -->
+          <div id="login_samir1" class='holla'>
+            <div id="login_samir2">
+              <a href='pantry.html'><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a>
+              <a href='restaurant.html'><span>Login</span></a>
+            </div>
+          </div>
+          <!-- <a href="restaurant.html">Login</a> -->
+          <!-- <button type="submit" value="submit" id="lock" src="lock.png" onclick="parent.location='restaurant.html';" value=""/>
+                    <a href="pantry.html"><img src="http://www.endlessicons.com/wp-content/uploads/2012/12/lock-icon-614x460.png" style="width:60px;height:40px;"></img></a> -->
+          <p class="message">Not registered? <a class="link" href="signup.html">Sign Up!</a></p>
+          <p class="message">If you don't belong here: <a class="link" href="index.html">Home</a></p>
         </div>
       </form>
       
