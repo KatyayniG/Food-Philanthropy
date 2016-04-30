@@ -327,9 +327,9 @@
         a:link, a:visited {
             color: none;
         }
-        a:hover {
+        /*a:hover {
             color: white;
-        }
+        }*/
 
 
         div#chatlist {
@@ -368,6 +368,12 @@
             transition: all .4s ease 0s;
         }
     }
+
+        a.button:hover {
+            color:white;
+        }
+
+
 
     </style>
 
@@ -480,10 +486,14 @@
                 <p>
                     <center>We aim to connect restaurants to food pantries to allow leftover food be donated to the people who need it.</center>
                 </p>
+                <br>
+                <p> 
+                    <center>Click <a href="aboutus.html" target="_blank"><u>here</u></a> to learn more! </center>
+                </p><br>
 
                 <!-- Navigation -->
 
-                <form class="margin-base-vertical">
+                <!-- <form class="margin-base-vertical"> -->
                     <!-- This adds an input box for getting a users email ======================MIGHT BE USEFUL KEEP================= -->
                     <!-- <p class="input-group">
                         <span class="input-group-addon"><span class="icon-envelope"></span></span>
@@ -492,14 +502,14 @@
                     <p class="help-block text-center"><small>Click below to sign up to be a food donor or sign in.</small></p><br>
                     <p class="text-center">
                         <button id= "buttonmargin" type="submitDonate" class="btn btn-primary btn-lg"
-                        data-toggle="button"><a href="signup.html">Sign Up</a></button>
+                        data-toggle="button"><a href="signup.html" class="button">Sign Up</a></button>
                     <!-- </p></a></a>
                     <!<p class="help-block text-center"><small>Click below to login to your portal.</small></p>
                     <p class="text-center">-->
-                        <button type="submitLogIn" class="btn btn-info btn-lg" data-toggle="button"><a href="login.html">Sign In</a></button>
+                        <button type="submitLogIn" class="btn btn-info btn-lg" data-toggle="button"><a href="login.html" class="button">Sign In</a></button>
                     </p>
                     </span>
-                </form>
+                <!-- </form> -->
 
                 <div class="margin-base-vertical">
                     <small class="text-muted"><center>Katyayni Gupta, Samir Chaudhry, Ovini Silva, Edmond Jay, and Tanay Venkateswaran.</a> University of Illinois at Urbana-Champaign 2016.</center></a></small>

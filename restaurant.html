@@ -13,15 +13,18 @@
     <link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../static/css/dashboard.css" rel="stylesheet">
+    <!-- // <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script> -->
+    <script language="JavaScript" type="text/javascript" src="static/js/jquery.js"></script> 
+    
+    <script type="text/javascript" src="/static/js/search.js"></script>
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
     <title>Donate Food</title>
     <script src="jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="static/js/search.js"></script>
     <!-- Custom CSS -->
     <link href="../static/css/stylish-portfolio.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href = "../static/css/style.css" rel = "stylesheet" type = "text/css">
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href = "static/css/style.css" rel = "stylesheet" type = "text/css">
     <!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,6 +32,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <script>
+  $.notify("Hello World");
+  </script>
   <style>
   /*
   * Base structure
@@ -168,6 +174,57 @@
   height: 500%;
   width: 89%;
   }
+
+  #wrapper {
+    top: 140px;
+  }
+
+  #wrapper img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #wrapper .text {
+  /*position:relative;*/
+  /*bottom:30px;*/
+  /*left:0px;*/
+  display:none;
+  }
+
+  #wrapper:hover .text {
+  display:block;
+  }
+
+  .thatsawrap {
+    top: 10px;
+  }
+
+  /*#bruh button {
+    background: url('not2.png');
+    background-color: transparent;
+    color: gray;
+  }*/
+
+  #buttonpls {
+    background-color: transparent;
+  }
+
+  #bruh img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #bruh {
+    top: 10px;
+    background-color: transparent;
+    color: gray;
+    text-align: center;
+  }
+
+  #bruh ul {
+    background-color: black;
+  }
+
   </style>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -183,8 +240,42 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+
+            <!-- <li class="thatsawrap">
+              <div id="wrapper">
+                <img src="not2.png" class="hover dropdown-toggle" data-toggle="dropdown" />
+                <p class="text">text</p>
+              </div>
+            </li> -->
+
+            <li id='bruh'>
+              <img id="not" style="display:none;" src='not3.png'/>
+              <i class="fa fa-spinner fa-spin" id="pending" style="display:none; color:grey; font-size: 2.0em; top:5px;" aria-hidden="true"></i>
+              <!-- <img id="notification" style="display:none; margin-right:16px;" src='not2.png' data-toggle='dropdown' onclick="$('#notification').hide()"/> -->
+              <img id="notification" style="display:none; margin-right:16px;" src='not2.png' data-toggle='dropdown'/>
+              <!-- <a data-toggle='dropdown'>HELLO</a> -->
+              <ul class="dropdown-menu">
+                <li>
+                 <!--  $('#notification').hide()"
+                  //"parent.location='confirmorder.html'" -->
+<!--                   <a onclick="parent.location='confirmorder.html'"
+ -->
+                  <a onclick="parent.location='confirmorder.html'" style="display:hover; color:black; background-color:white;">Your order has been accepted by the food pantry!  <i class="fa fa-check-circle-o" aria-hidden="false" style="font-size:1.5em; color:green; margin-left: 10px;"></i></a>
+                  <!-- <img src="check.png" width="3" height="3"/> -->
+                </li>
+              </ul>
+            </li>
+<!-- 
+            <li class="wrapper"> -->
+              <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu3"> -->
+               <!--  <li class="wrapper"><img id="notification" class="hover" src="not2.png" style="display:none;" hspace="10" vspace="10" width="30" height="30"> -->
+              <!-- </ul> -->
+                <!-- <p class="text">text</p> -->
+              </img>
+                </li>
+            <!-- <i class="fa fa-bell" id="bell" aria-hidden="true"></i> -->
             <li><a href="profile.html">Profile</a></li>
-            <li><a href="confirmorder.html">Confirmed Orders</a></li>
+            <li><a href="confirmorder.html" id="done" style="display:none;">Confirmed Orders</a></li>
             <li><a href="index.html">Logout</a></li>
             <!-- <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li> -->
@@ -195,6 +286,7 @@
         </div>
       </div>
     </nav>
+
     <div class="w3-container">
       <div class="row">
         <!--  <div class="col-sm-3 col-md-2 sidebar">
@@ -241,19 +333,45 @@
                         </div>
                       </center>
                       <div id = "currentLocation">
+
                       <!-- </div> -->
-                      <input type="button" value="submit" position="relative" onClick="parent.location='confirmorder.html'"/>
+                      <!-- onClick="parent.location='confirmorder.html'" -->
+
+                      <!-- <input type="button" value="submit" position="relative" onclick="$('#notification').show()"/> -->
+                      <input type="button" value="submit" position="relative" onclick="hello()"/>
+                     
                       <!-- <button type="submit" onclick="confirm.html" class="btn btn-default" id = "placeOrder">Place Order</button> -->
                     <!-- </div> -->
                     <!-- </form> -->
                     
                   </div>
+                  <script>
+                  function hello() {
+                    $('#notification').hide();
+                    $('#pending').show();
+                    setTimeout(popup, 4000);
+                  } 
+                  function popup() {
+                    $('#pending').hide();
+                    $('#notification').show();
+                    $('#done').show();
+
+                //     function anything() {
+                //     $('*').click(function(e) {
+                //       if(e.target.id != 'notification') {
+                //         $('#notification').hide();
+                //       }
+                //     });
+                // });
+
+                  }
+                  </script>
                   <!-- jQuery -->
-                  <script src="../js/jquery.js"></script>
+                  <!-- <script src="static/js/jquery.js"></script> -->
                   
                   <!-- Bootstrap Core JavaScript -->
-                  <script src="../js/bootstrap.min.js"></script>
-                  <script src = "search.js"></script>
+                  <script src="static/js/bootstrap.min.js"></script>
+                  <!-- // <script src = "search.js"></script> -->
                   <script src="https://maps.googleapis.com/maps/api/js?callback=Map_create&amp;sensor=true&amp;libraries=places,geometry"type = 'text/javascript' async defer>
                   </script>
                 </div>
